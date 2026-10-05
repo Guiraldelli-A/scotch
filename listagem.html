@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque - scotch</title>
+</head>
+<body>
+    <header>
+        <h1><em>Sistema de Gerenciamento - scotch</em></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Painel Inicial</a></li>
+                <li><a href="cadastro.html">Cadastrar Peça</a></li>
+                <li><a href="listagem.html">Estoque (Listagem)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Itens Cadastrados</h2>
+            
+            <!-- Controles de Pesquisa, Filtro e Ordenação -->
+            <fieldset>
+                <legend>Controles de Busca</legend>
+                <form action="#" method="get">
+                    <label for="busca">Pesquisa:</label>
+                    <input type="search" id="busca" name="busca" placeholder="Buscar por nome...">
+                    
+                    <label for="filtro">Filtro:</label>
+                    <select id="filtro" name="filtro">
+                        <option value="todos">Todas as Categorias</option>
+                        <option value="camiseta">Camisetas</option>
+                        <option value="moletom">Moletons</option>
+                    </select>
+
+                    <label for="ordenacao">Ordenação:</label>
+                    <select id="ordenacao" name="ordenacao">
+                        <option value="recentes">Mais Recentes</option>
+                        <option value="menor_preco">Menor Preço</option>
+                        <option value="maior_preco">Maior Preço</option>
+                    </select>
+
+                    <button type="button">Aplicar</button>
+                </form>
+            </fieldset>
+            <br>
+
+            <!-- Tabela de Visualização de Itens -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome da Peça</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Camiseta Oversized Faded</td>
+                        <td>Camiseta</td>
+                        <td>R$ 189,90</td>
+                        <td>
+                            <!-- Botões de Edição, Exclusão e Visualização de Detalhes -->
+                            <a href="detalhes.html"><button type="button">Ver detalhes</button></a>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Moletom Boxy Zip-up</td>
+                        <td>Moletom</td>
+                        <td>R$ 349,90</td>
+                        <td>
+                            <a href="detalhes.html"><button type="button">Ver detalhes</button></a>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 scotch.</p>
+    </footer>
+</body>
+</html>
