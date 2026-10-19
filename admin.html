@@ -2,34 +2,43 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Admin - scotch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1><em>Sistema Admin - scotch</em></h1>
-        <nav>
+    <header class="header-main">
+        <div class="logo-container">
+            <h1 class="brand-logo">scotch <span style="font-size: 1rem; font-style: normal;">[ADMIN]</span></h1>
+        </div>
+        <nav class="nav-menu">
             <ul>
-                <li><a href="admin.html">Painel Inicial</a></li>
+                <li><a href="admin.html">Dashboard</a></li>
                 <li><a href="cadastro.html">Cadastrar Peça</a></li>
-                <li><a href="listagem.html">Estoque (Listagem)</a></li>
-                <li><a href="index.html">Sair (Voltar para a Loja)</a></li>
+                <li><a href="listagem.html">Estoque</a></li>
+                <li><a href="index.html" style="color: #c00;">Sair da Conta</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Resumo da Loja</h2>
-            <p>Bem-vindo ao back-office. Aqui você controla tudo o que aparece na vitrine para os clientes.</p>
-            <ul>
-                <li>Total de peças ativas: 2</li>
-                <li>Pedidos pendentes: 0</li>
+    <main class="container">
+        <div class="section-title">
+            <h2>Visão Geral do Sistema</h2>
+            <p>Gerenciamento interno da marca.</p>
+        </div>
+
+        <section class="admin-section">
+            <h2>Resumo Operacional</h2>
+            <p style="margin-bottom: 20px;">Bem-vindo ao back-office. Você está visualizando os dados em tempo real.</p>
+            <ul class="details-list">
+                <li><strong>Peças Ativas:</strong> 2 produtos catalogados</li>
+                <li><strong>Avisos:</strong> Nenhum produto com estoque baixo.</li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 scotch - Painel Interno.</p>
+    <footer class="footer-main">
+        <p>&copy; 2026 scotch - Painel Interno Restrito.</p>
     </footer>
 </body>
 </html>

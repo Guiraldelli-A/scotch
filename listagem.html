@@ -2,92 +2,102 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Estoque - scotch</title>
+    <title>Estoque - scotch Admin</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1><em>Sistema de Gerenciamento - scotch</em></h1>
-        <nav>
+    <header class="header-main">
+        <div class="logo-container">
+            <h1 class="brand-logo">scotch <span style="font-size: 1rem; font-style: normal;">[ADMIN]</span></h1>
+        </div>
+        <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Painel Inicial</a></li>
+                <li><a href="admin.html">Dashboard</a></li>
                 <li><a href="cadastro.html">Cadastrar Peça</a></li>
-                <li><a href="listagem.html">Estoque (Listagem)</a></li>
+                <li><a href="listagem.html">Estoque</a></li>
+                <li><a href="index.html" style="color: #c00;">Sair da Conta</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Itens Cadastrados</h2>
-            
-            <!-- Controles de Pesquisa, Filtro e Ordenação -->
-            <fieldset>
-                <legend>Controles de Busca</legend>
-                <form action="#" method="get">
-                    <label for="busca">Pesquisa:</label>
-                    <input type="search" id="busca" name="busca" placeholder="Buscar por nome...">
-                    
-                    <label for="filtro">Filtro:</label>
-                    <select id="filtro" name="filtro">
-                        <option value="todos">Todas as Categorias</option>
+    <main class="container">
+        <div class="section-title">
+            <h2>Gerenciamento de Estoque</h2>
+            <p>Filtre, edite e visualize os detalhes dos produtos cadastrados.</p>
+        </div>
+
+        <section class="admin-section">
+            <!-- Barra de Filtros -->
+            <form action="#" method="get" class="filter-bar">
+                <div class="form-group">
+                    <label class="form-label" for="busca">Pesquisa por nome:</label>
+                    <input class="form-control" type="search" id="busca" name="busca" placeholder="Buscar...">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="filtro">Filtrar Categoria:</label>
+                    <select class="form-control" id="filtro" name="filtro">
+                        <option value="todos">Todos</option>
                         <option value="camiseta">Camisetas</option>
                         <option value="moletom">Moletons</option>
                     </select>
+                </div>
 
-                    <label for="ordenacao">Ordenação:</label>
-                    <select id="ordenacao" name="ordenacao">
-                        <option value="recentes">Mais Recentes</option>
+                <div class="form-group">
+                    <label class="form-label" for="ordenacao">Ordenar por:</label>
+                    <select class="form-control" id="ordenacao" name="ordenacao">
+                        <option value="id_asc">ID Crescente</option>
                         <option value="menor_preco">Menor Preço</option>
                         <option value="maior_preco">Maior Preço</option>
                     </select>
+                </div>
 
-                    <button type="button">Aplicar</button>
-                </form>
-            </fieldset>
-            <br>
+                <button class="btn-primary" type="button" style="width: auto; padding: 12px 30px;">Aplicar</button>
+            </form>
 
-            <!-- Tabela de Visualização de Itens -->
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome da Peça</th>
-                        <th>Categoria</th>
-                        <th>Preço</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>Camiseta Oversized Faded</td>
-                        <td>Camiseta</td>
-                        <td>R$ 189,90</td>
-                        <td>
-                            <!-- Botões de Edição, Exclusão e Visualização de Detalhes -->
-                            <a href="detalhes.html"><button type="button">Ver detalhes</button></a>
-                            <button type="button">Editar</button>
-                            <button type="button">Excluir</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Moletom Boxy Zip-up</td>
-                        <td>Moletom</td>
-                        <td>R$ 349,90</td>
-                        <td>
-                            <a href="detalhes.html"><button type="button">Ver detalhes</button></a>
-                            <button type="button">Editar</button>
-                            <button type="button">Excluir</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Tabela de Dados -->
+            <div style="overflow-x: auto;">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>#ID</th>
+                            <th>Nome do Produto</th>
+                            <th>Categoria</th>
+                            <th>Preço (R$)</th>
+                            <th>Ações Administrativas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Camiseta Oversized Faded</td>
+                            <td>Camiseta</td>
+                            <td>189,90</td>
+                            <td>
+                                <a href="detalhes.html" class="btn-action">Ver Detalhes</a>
+                                <button type="button" class="btn-action">Editar</button>
+                                <button type="button" class="btn-action btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Moletom Boxy Zip-up</td>
+                            <td>Moletom</td>
+                            <td>349,90</td>
+                            <td>
+                                <a href="detalhes.html" class="btn-action">Ver Detalhes</a>
+                                <button type="button" class="btn-action">Editar</button>
+                                <button type="button" class="btn-action btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 scotch.</p>
+    <footer class="footer-main">
+        <p>&copy; 2026 scotch - Painel Interno Restrito.</p>
     </footer>
 </body>
 </html>

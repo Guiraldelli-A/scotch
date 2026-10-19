@@ -2,43 +2,64 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Cadastrar - scotch</title>
+    <title>Cadastrar Peça - scotch Admin</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1><em>Sistema Admin - scotch</em></h1>
-        <nav>
+    <header class="header-main">
+        <div class="logo-container">
+            <h1 class="brand-logo">scotch <span style="font-size: 1rem; font-style: normal;">[ADMIN]</span></h1>
+        </div>
+        <nav class="nav-menu">
             <ul>
-                <li><a href="admin.html">Painel Inicial</a></li>
+                <li><a href="admin.html">Dashboard</a></li>
                 <li><a href="cadastro.html">Cadastrar Peça</a></li>
-                <li><a href="listagem.html">Estoque (Listagem)</a></li>
+                <li><a href="listagem.html">Estoque</a></li>
+                <li><a href="index.html" style="color: #c00;">Sair da Conta</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Cadastrar Nova Peça</h2>
+    <main class="container">
+        <div class="section-title">
+            <h2>Cadastrar Novo Drop</h2>
+            <p>Insira as informações da nova peça exclusiva.</p>
+        </div>
+
+        <section class="admin-section">
             <form action="#" method="post">
-                <!-- Os mesmos campos que fizemos na etapa anterior -->
-                <label for="nome">Nome da Peça:</label>
-                <input type="text" id="nome" name="nome" required>
-                <br><br>
+                <div class="form-group">
+                    <label class="form-label" for="nome">Nome da Peça:</label>
+                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Ex: Jaqueta Puffer Couro" required>
+                </div>
 
-                <label for="categoria">Categoria:</label>
-                <select id="categoria" name="categoria">
-                    <option value="camiseta">Camiseta</option>
-                    <option value="moletom">Moletom</option>
-                </select>
-                <br><br>
+                <div class="form-group">
+                    <label class="form-label" for="categoria">Categoria:</label>
+                    <select class="form-control" id="categoria" name="categoria">
+                        <option value="camiseta">Camiseta</option>
+                        <option value="moletom">Moletom / Hoodie</option>
+                        <option value="calca">Calça</option>
+                        <option value="acessorio">Acessório</option>
+                    </select>
+                </div>
 
-                <label for="preco">Preço (R$):</label>
-                <input type="number" id="preco" name="preco" step="0.01" required>
-                <br><br>
+                <div class="form-group">
+                    <label class="form-label" for="preco">Preço (R$):</label>
+                    <input class="form-control" type="number" id="preco" name="preco" step="0.01" placeholder="0.00" required>
+                </div>
 
-                <button type="submit">Salvar Cadastro</button>
+                <div class="form-group">
+                    <label class="form-label" for="descricao">Detalhes / Material:</label>
+                    <textarea class="form-control" id="descricao" name="descricao" rows="5" placeholder="Descreva os materiais, lavagem e exclusividade..." required></textarea>
+                </div>
+
+                <button class="btn-primary" type="submit" style="max-width: 200px;">Salvar no Banco</button>
             </form>
         </section>
     </main>
+
+    <footer class="footer-main">
+        <p>&copy; 2026 scotch - Painel Interno Restrito.</p>
+    </footer>
 </body>
 </html>

@@ -2,40 +2,49 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Detalhes da Peça - scotch</title>
+    <title>Detalhes da Peça - scotch Admin</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1><em>Sistema de Gerenciamento - scotch</em></h1>
-        <nav>
+    <header class="header-main">
+        <div class="logo-container">
+            <h1 class="brand-logo">scotch <span style="font-size: 1rem; font-style: normal;">[ADMIN]</span></h1>
+        </div>
+        <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Painel Inicial</a></li>
+                <li><a href="admin.html">Dashboard</a></li>
                 <li><a href="cadastro.html">Cadastrar Peça</a></li>
-                <li><a href="listagem.html">Estoque (Listagem)</a></li>
+                <li><a href="listagem.html">Estoque</a></li>
+                <li><a href="index.html" style="color: #c00;">Sair da Conta</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Detalhes do Item #001</h2>
-            
-            <ul>
-                <li><strong>Nome:</strong> Camiseta Oversized Faded</li>
+    <main class="container">
+        <div class="section-title">
+            <h2>Ficha Técnica: Item #001</h2>
+            <p>Visualização expandida do registro no banco de dados.</p>
+        </div>
+
+        <section class="admin-section">
+            <ul class="details-list">
+                <li><strong>Registro ID:</strong> #001</li>
+                <li><strong>Nome da Peça:</strong> Camiseta Oversized Faded</li>
                 <li><strong>Categoria:</strong> Camiseta</li>
-                <li><strong>Preço:</strong> R$ 189,90</li>
-                <li><strong>Estoque atual:</strong> 15 unidades</li>
-                <li><strong>Descrição:</strong> Camiseta de algodão premium, corte quadrado e lavagem estonada. Peça exclusiva sem reposição.</li>
+                <li><strong>Preço Registrado:</strong> R$ 189,90</li>
+                <li><strong>Estoque Físico:</strong> 15 unidades</li>
+                <li><strong>Descrição:</strong> Camiseta de algodão premium (300gsm), corte quadrado e lavagem estonada manual. Peça exclusiva de tiragem única sem reposição. Etiqueta interna emborrachada.</li>
             </ul>
 
-            <br>
-            <a href="listagem.html"><button type="button">Voltar para a lista</button></a>
-            <button type="button">Editar Item</button>
+            <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                <a href="listagem.html" class="btn-action" style="padding: 10px 20px;">&larr; Voltar ao Estoque</a>
+                <button type="button" class="btn-action" style="padding: 10px 20px; background: #111; color: #fff;">Editar Ficha</button>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 scotch.</p>
+    <footer class="footer-main">
+        <p>&copy; 2026 scotch - Painel Interno Restrito.</p>
     </footer>
 </body>
 </html>
